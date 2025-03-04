@@ -15,17 +15,26 @@ body {
     padding: 20px;
 }
 
-/* Cabeçalho */
+/* Cabeçalho com logo */
 header {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9);
     padding: 15px;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header img {
+    height: 50px;
+    margin-right: 15px;
 }
 
 header h1 {
     font-size: 24px;
 }
 
+/* Menu de navegação */
 nav {
     margin-top: 10px;
 }
@@ -53,28 +62,56 @@ h2 {
     margin-bottom: 10px;
 }
 
-/* Botões */
+/* Botões melhorados */
 .btn {
     display: inline-block;
     padding: 12px 25px;
     margin-top: 15px;
-    background: #ff4500;
+    background: linear-gradient(45deg, #ff4500, #ff6347);
     color: white;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
+    box-shadow: 0px 4px 8px rgba(255, 69, 0, 0.3);
 }
 
 .btn:hover {
-    background: #ff6347;
+    background: linear-gradient(45deg, #ff6347, #ff4500);
+    transform: scale(1.05);
 }
 
-/* Rodapé */
+/* Rodapé profissional */
 footer {
     margin-top: 30px;
-    padding: 15px;
-    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.9);
     border-radius: 10px;
     font-size: 14px;
+}
+
+footer a {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #ff4500;
+}
+
+/* Animações suaves */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main, header, footer {
+    animation: fadeIn 1s ease-out;
 }
